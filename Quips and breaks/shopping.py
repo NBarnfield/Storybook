@@ -2,18 +2,41 @@
 
 def shopping():
 
+    prompt = ">>> "
+
     grocery_list = []
     grocery_items = ['milk', 'newspaper', 'slippers']
 
     while grocery_list != grocery_items:
         print("\nItems in your possession: {}".format(grocery_list))
         print("\nYou are standing in the supermaket - What would you like to find?" )
-        choice = input(" a) slippers b) newspaper c) milk")
+        choice = input(" a) slippers b) newspaper c) milk\n")
 
         if choice == 'a' and 'slippers' not in grocery_list:
-            print("")
-            grocery_list.append('slippers')
-            grocery_list.sort()
+
+            slippers_found = 0
+
+            while slippers_found == 0:
+                print("Slippers...where could they be...")
+                isle = input("Do you check the a) slippers isle, or b) the freezer section?\n")
+
+                if isle == 'a':
+                    print("You search high and low, but there are no slippers...")
+                    print("Could this have been the work of the malevolent Barbarra?\n")
+
+                elif isle == 'b':
+                    print("You check the icecream section...Nope...")
+                    print("The vegetable section....Nope...")
+                    print("You almost give up hope and then you see them")
+                    print("Slippers behind the fish-fingers!!!")
+                    print("You thought something smelled fishy - Could this be the work of Barbarra?")
+                    print("Slippers added to your cart!\n")
+                    slippers_found = 1
+                    grocery_list.append('slippers')
+                    grocery_list.sort()
+
+                else:
+                    print("That isn't a valid option!\n")
 
         elif choice == 'b' and 'newspaper' not in grocery_list:
             print("You walk down the sundries isle and can see ol' lady buscuit Barbarra eying off the last edition of 'The Daily Bake'.")
