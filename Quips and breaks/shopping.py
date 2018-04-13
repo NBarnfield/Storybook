@@ -39,27 +39,56 @@ def shopping():
                     print("That isn't a valid option!\n")
 
         elif choice == 'b' and 'newspaper' not in grocery_list:
-            print("You walk down the sundries isle and can see ol' lady buscuit Barbarra eying off the last edition of 'The Daily Bake'.")
-            print("There is no way you are going to lose to this honeybun.")
-            dive = input("Will you dive for the paper (y/n)? ")
-            if dive == 'y' or 'Y':
-                print("You have won, Barbarra is down for the count and you have your newspaper")
-                grocery_list.append('newspaper')
-                grocery_list.sort()
 
-            else:
-                print("Through some arcane socery you have aquired the paper...Barbarra sensed your intention..."
-                      "and backflipped over horseshit to wrangle it from your claws and fell in dramaic fashion, "
-                      "leaving you the clear victor. You have your newspaper.")
-                grocery_list.append('newspaper')
-                grocery_list.sort()
+            newspaper_choice = 0
 
-        elif choice == 'c'and 'milk' not in grocery_list:
-            grocery_list.append('milk')
-            grocery_list.sort()
+            while newspaper_choice == 0:
+                print("You walk down the sundries isle and can see ol' lady buscuit Barbarra eying off the last edition of 'The Daily Bake'.")
+                print("There is no way you are going to lose to this honeybun.")
+                dive = input("Will you dive for the paper (y/n)? ")
 
-        else:
-            print("That isn't a valid option!")
+                if dive == 'y' or 'Y':
+                    print("You have won, Barbarra is down for the count and you have your newspaper")
+                    grocery_list.append('newspaper')
+                    grocery_list.sort()
+
+                elif dive == 'n' or 'N':
+                    print("Through some arcane socery you have aquired the paper...Barbarra sensed your intention..."
+                          "and backflipped over horseshit to wrangle it from your claws and fell in dramaic fashion, "
+                          "leaving you the clear victor. You have your newspaper.\n")
+                    newspaper_choice = 1
+                    grocery_list.append('newspaper')
+                    grocery_list.sort()
+
+                else:
+                print("That isn't a valid option!")
+
+
+        elif choice == 'c'and 'milk' not in grocery_list
+
+            moo_juice = 0
+
+            while moo_juice == 0:
+                print("What milk did Mrs CCB want again...?")
+                milk_choice = input(prompt + "Was is a) full cream b) skim c) apple juice")
+
+                if milk_choice == 'a':
+                    print("Full cream...that doesn't sound right.")
+                    print("She's on the all carb no fat diet right now...")
+
+                elif milk_choice == 'b':
+                    print("Yes, that's right! Enough calcium to keep her sheen, no fat to keep the appeal to the punters alive.")
+                    moo_juice = 1
+                    grocery_list.append('milk')
+                    grocery_list.sort()
+
+                elif milk_choice == 'c':
+                    print("Wait a second, she was after moo-juie, not apple juice!!")
+
+                else:
+                    print("That isn't a valid option!\n")
+
+
 
 shopping()
 print("You have everything required to appease Mrs CCB and perhaps learn an insight or two into what she has been doing...")
