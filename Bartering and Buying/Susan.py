@@ -7,16 +7,19 @@ money = 0
 while money == 0:
     try:
         money = float(input("How much money will you offer? "))
-    except:
+        if money >= 10.50:
+            print("'I will take all of that thank you very much.' ")
+            print("She scurries into the dark night that appeared from nowhere.")
+            print("You have the slippers!! And have paid well over market value for secondhand footwear.")
+        elif money >= 6.50:
+            print(
+                "She sizes you up and finally declares - 'Give me what you've got and a coffee card and we're even...'")
+            print("Success, the slippers are yours!!! Shame you'll be a barista forever.")
+        else:
+            print("Clearly abhorred with the pitence offered she cried 'Don't even worry about it, kid.")
+            print(" You've got your own problems clearly....'")
+            print("You danced with the devil and won. Good for you, Porkchop!")
+    except ValueError:
         print("That is not a monetary value!! Get it together and look in your purse, Barbarra!")
         print("Look again!!")
 
-if  money >= 10.50:
-    print("'I will take all of that thank you very much.' she proclaims as she scurries into the dark night that appeared from nowhere.")
-    print("You have the slippers!! And have paid well over market value for secondhand footwear.")
-elif money >= 6.50:
-    print("She sizes you up and finally declares - 'Give me what you've got and a coffee card and we're even...'")
-    print("Success, the slippers are yours!!! Shame you'll be a barista forever.")
-else:
-    print("Clearly abhorred with the pitence offered she cried 'Don't even worry about it, kid. You've got your own problems clearly....'")
-    print("You danced with the devil and won. Good for you, Porkchop!")
